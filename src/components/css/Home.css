@@ -1,0 +1,73 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #9e9e9e;
+}
+
+#root{
+  max-width: 100%;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 0px 30px;
+  font-family: sans-serif;
+  flex-wrap: wrap;
+  /* min-height: 100vh; */
+  box-sizing: border-box;
+}
+
+.home-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.home-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: #ebebeb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-align: left;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #ffe49b;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 15px;
+  color: #555;
+}
+
+.home-right {
+  flex: 1;
+  /* min-width: 300px; */
+  text-align: center;
+  height: 499px;
+}
+
+.home-image {
+  height: 532px;
+  max-width: 90%;
+  /* height: 599px; */
+}

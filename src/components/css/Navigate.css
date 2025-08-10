@@ -1,0 +1,35 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebebeb2b;
+  padding: 15px 20px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* margin: 20px auto; */
+  width: 97%;
+  height: 30px;
+}
+
+.game-logo {
+  margin: 0;
+  color: #4a90e2;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.home-button {
+  background-color: #28343a;
+  color: #ebebeb;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #ebebeb;
+  color: #28343a;
+}

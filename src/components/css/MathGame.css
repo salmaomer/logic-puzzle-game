@@ -1,0 +1,281 @@
+/* body in Math */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #9e9e9e;
+}
+
+/* ✅✅✅✅✅✅✅✅✅✅✅  Board.css */
+/* Main board container */
+.board-wrapper {
+  background: linear-gradient(to right, #f3f4f7, #e8f0ff);
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* Main layout with two sides */
+.board-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+}
+
+/* Left side: Game content */
+.board-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+/* Right side: Image */
+.board-right {
+  flex: 1;
+  padding-top: 45px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-image {
+  max-width: 100%;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Float animation (optional) */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Page title */
+.board-title {
+  font-size: 32px;
+  color: #333;
+  margin: 0px 0 30px 0;
+  text-align: left;
+}
+
+/* Grid of tiles */
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Exactly 5 columns */
+  gap: 15px;
+  max-width: 500px;
+}
+
+/* Tile styles */
+.tile {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-align: center;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  background-color: #f0f8ff;
+}
+
+.tile-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Ladder = green stripe */
+.tile.ladder {
+  border-left: 6px solid #ffd252;
+}
+
+/* Snake = red stripe */
+.tile.snake {
+  border-left: 6px solid #455a64;
+}
+
+/* Stars */
+.stars {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 14px;
+  color: gold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .board-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .board-left, .board-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .board-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .board-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .tile-number {
+    font-size: 16px;
+  }
+
+  .tile {
+    padding: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .home-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ✅✅✅✅✅✅✅✅✅✅✅  LevelPage.css */
+.level-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  min-height: 90vh;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+}
+
+/* Image container takes 50% */
+.level-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.level-image img {
+  width: 100%;
+  max-width: 75%;
+  height: auto;
+}
+
+/* Content container takes 50% */
+.level-content {
+  flex: 1;
+  max-width: 500px;
+  background-color: #ebebeb;
+  margin-right: 25px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.level-title {
+  font-size: 28px;
+  color: #ffc727;
+  margin-bottom: 20px;
+}
+
+.question-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.answer-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.submit-button {
+  background-color: #28343a;
+  color: #ebebeb;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #ebebeb;
+  color: #28343a;
+}
+
+.result-message {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.back-button {
+  margin-top: 20px;
+  background-color: #28343a;
+  color: #ebebeb;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  background-color: #ebebeb;
+  color: #28343a;
+}
+
+/* Responsive for tablets and phones */
+@media (max-width: 768px) {
+  .level-page-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .level-image, .level-content {
+    flex: none;
+    width: 100%;
+  }
+
+  .level-image img {
+    max-width: 250px;
+  }
+}
+/* emojis */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.5);
+    opacity: 0;
+  }
+}
