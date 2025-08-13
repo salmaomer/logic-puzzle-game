@@ -10,7 +10,7 @@ export default function Board() {
 
   return (
     <>
-      <Navigate to="/" />
+      <Navigate to="/Home" />
 
       <div className="board-main">
         <div className="board-left">

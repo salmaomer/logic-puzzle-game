@@ -59,7 +59,7 @@ export default function LevelPage() {
 
   return (
     <>
-      <Navigate to="/" />
+      <Navigate to="/Home" />
       <div className="level-page-container">
         <div className="level-image">
           <img

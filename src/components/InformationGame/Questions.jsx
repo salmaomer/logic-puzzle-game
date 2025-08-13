@@ -108,7 +108,7 @@ export default function Questions() {
 
   return (
     <>
-      <Navigate to="/" />
+      <Navigate to="/Home" />
       <div className="question-page">
         <div className="illustration">
           <img src="/images/QuestionsImage.png" alt="illustration" />

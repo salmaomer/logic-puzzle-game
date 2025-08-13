@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <Navigate to="/" />
+      <Navigate to="/Home" />
       <div className="home-container">
         <div className="home-left">
           <h1 className="home-title">Choose Your Game</h1>
